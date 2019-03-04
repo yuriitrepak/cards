@@ -1,0 +1,94 @@
+body {
+	margin:0px;
+	padding: 0px;
+} 
+
+.cards {
+	height: 600px;
+	width: 1000px;
+	background-color: green;
+}
+
+.cards div {
+	height: 300px;
+	width: 200px;
+	background-color: white;
+	display: inline-block;
+	margin-top: 150px;
+	border-radius: 5px;
+	position: relative;
+}
+
+.ace-heart {
+	margin-left: 300px;
+	background: url("heart.svg") no-repeat 50% 50%;
+}
+
+.two-spade {
+	margin-left: 15px;
+	background: url("spade.svg") no-repeat 50% 50%;
+	background-size: 60px;	
+}
+
+.ace-heart::before {
+	content: "A";
+	color: red;
+	font-size: 25px;
+	font-weight: bold;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	background: url("heart.svg") no-repeat 50% 100%;
+	background-size: 20px;
+	padding-bottom: 20px;
+}
+
+.ace-heart::after {
+	content: "A";
+	color: red;
+	font-size: 25px;
+	font-weight: bold;
+	position: absolute;
+	right: 5px;
+	bottom: 5px;
+	background: url("heart.svg") no-repeat 50% 100%;
+	background-size: 20px;
+	padding-bottom: 20px;
+}
+
+.two-spade::before {
+	content: "2";
+	color: black;
+	font-size: 25px;
+	font-weight: bold;
+	position: absolute;
+	left: 5px;
+	top: 5px;
+	background: url("spade.svg") no-repeat 50% 100%;
+	background-size: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+.two-spade::after {
+	content: "2";
+	color: black;
+	font-size: 25px;
+	font-weight: bold;
+	position: absolute;
+	right: 5px;
+	bottom: 5px;
+	background: url("spade.svg") no-repeat 50% 100%;
+	background-size: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+.cards div::after {
+	transform: rotate(180deg);
+}
+
+.cards div::before,
+.cards div::after {
+	width: 20px;
+}
